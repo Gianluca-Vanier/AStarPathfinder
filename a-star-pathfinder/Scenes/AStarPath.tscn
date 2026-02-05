@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c738f7782ik6v"]
+
+[ext_resource type="Script" uid="uid://h8un8f8x78gh" path="res://Scripts/AStarPath.cs" id="1_hght8"]
+
+[node name="AStarPath" type="Node2D" unique_id=577284875]
+script = ExtResource("1_hght8")
