@@ -1,61 +1,20 @@
 [gd_scene format=3 uid="uid://c0bffrgf88btw"]
 
 [ext_resource type="Texture2D" uid="uid://c46v4kd3qa6lw" path="res://Assets/New Piskel-1.png.png" id="1_0y7nr"]
-
-[sub_resource type="CSharpScript" id="CSharpScript_0y7nr"]
-script/source = "using Godot;
-using System;
-
-public partial class Character : CharacterBody2D
-{
-	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
-
-	public override void _PhysicsProcess(double delta)
-	{
-		Vector2 velocity = Velocity;
-
-		// Add the gravity.
-		if (!IsOnFloor())
-		{
-			velocity += GetGravity() * (float)delta;
-		}
-
-		// Handle Jump.
-		if (Input.IsActionJustPressed(\"ui_accept\") && IsOnFloor())
-		{
-			velocity.Y = JumpVelocity;
-		}
-
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\");
-		if (direction != Vector2.Zero)
-		{
-			velocity.X = direction.X * Speed;
-		}
-		else
-		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-		}
-
-		Velocity = velocity;
-		MoveAndSlide();
-	}
-}
-"
+[ext_resource type="Script" uid="uid://d3l5roeuut2nt" path="res://Scripts/Character.cs" id="1_jo2ib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jo2ib"]
-size = Vector2(172.5, 168.5)
+size = Vector2(82, 80)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1372642857]
-script = SubResource("CSharpScript_0y7nr")
+[node name="Character" type="CharacterBody2D" unique_id=1372642857]
+motion_mode = 1
+script = ExtResource("1_jo2ib")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1639199605]
 position = Vector2(542, 281)
-scale = Vector2(9.562499, 9.3125)
+scale = Vector2(4.562, 4.443)
 texture = ExtResource("1_0y7nr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1541229177]
-position = Vector2(541.75, 281.25)
+position = Vector2(542, 281)
 shape = SubResource("RectangleShape2D_jo2ib")
