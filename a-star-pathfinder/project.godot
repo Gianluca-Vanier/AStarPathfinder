@@ -16,8 +16,6 @@ config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 
 [display]
 
-window/size/viewport_width=1000
-window/size/viewport_height=1000
 window/size/mode=1
 
 [dotnet]
