@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n3ho4fdago80"]
 
 [ext_resource type="PackedScene" uid="uid://c0bffrgf88btw" path="res://Scenes/Character.tscn" id="1_r150o"]
-[ext_resource type="Script" uid="uid://cwaxox2wtc1kj" path="res://Scripts/AStarPath.cs" id="1_rgh2o"]
+[ext_resource type="Script" uid="uid://b2wou2tf8pgnh" path="res://Scripts/AStarPath.cs" id="1_rgh2o"]
 [ext_resource type="Texture2D" uid="uid://ctx7qb7u22tom" path="res://Assets/Floor.png" id="2_kln2b"]
 [ext_resource type="Texture2D" uid="uid://blokmujkbnh55" path="res://Assets/Wall.png" id="3_rgh2o"]
 
@@ -30,7 +30,6 @@ script = ExtResource("1_rgh2o")
 z_index = 1
 position = Vector2(-18, 273)
 scale = Vector2(0.5, 0.5)
-script = null
 
 [node name="TileMap" type="TileMap" parent="." unique_id=856455853]
 tile_set = SubResource("TileSet_pbw6q")

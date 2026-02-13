@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://c0bffrgf88btw"]
 
 [ext_resource type="Texture2D" uid="uid://c46v4kd3qa6lw" path="res://Assets/Character.png" id="1_0y7nr"]
-[ext_resource type="Script" path="res://Scripts/Character.cs" id="1_jo2ib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jo2ib"]
 size = Vector2(82, 80)
 
 [node name="Character" type="CharacterBody2D" unique_id=1372642857]
 motion_mode = 1
-script = ExtResource("1_jo2ib")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1639199605]
 position = Vector2(542, 281)
